@@ -29,6 +29,13 @@ class QuestionCardView: UIView {
     private func applyStyling() {
         titleLabel.textColor = .white
         titleLabel.font = UIFont.systemFont(ofSize: 22, weight: UIFont.Weight.semibold)
+        
+        titleLabel.contentMode = .scaleToFill
+        titleLabel.numberOfLines = 0
+        
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        titleLabel.trailingAnchor.constraint(lessThanOrEqualTo: self.trailingAnchor).isActive = true
 
         layer.cornerRadius = 10
         layer.cornerCurve = .continuous
